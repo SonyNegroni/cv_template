@@ -1,0 +1,329 @@
+@import "assets/fonts/MyriadPro/stylesheet.css";
+@import "assets/fonts/cv-icons-v1.0/style.css";
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    color: #000;
+    font: 400 16px/1.3 "Myriad Pro";
+}
+
+body {
+    margin: 0;
+}
+
+p {
+    margin: 0;
+}
+
+p ~ p {
+    margin-top: 15px;
+}
+
+/* Common elements */
+.main {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: auto;
+    max-width: 1122px;
+    width: 95%;
+}
+
+.title {
+    margin: 0 0 10px;
+    text-transform: uppercase;
+}
+
+.title:not(.title_sub) {
+    align-items: center;
+    color: #3d6cb0;
+    display: flex;
+    font-size: 30px;
+}
+
+@media screen and (min-width: 1024px) {
+    .title:not(.title_sub) {
+        font-size: 41px;
+    }
+}
+
+.title:not(.title_sub):before {
+    border-radius: 50%;
+    border: 1px solid currentColor;
+    flex-shrink: 0;
+    font-size: 32px;
+    padding: 3px;
+}
+
+@media screen and (min-width: 1024px) {
+    .title:not(.title_sub):before {
+        font-size: 64px;
+    }
+}
+
+.title:not(.title_sub):after {
+    background-color: currentColor;
+    content: "";
+    flex-grow: 1;
+    height: 5px;
+}
+
+.title_sub {
+    font-weight: inherit;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.title_skills {
+    margin-bottom: -10px;
+    text-transform: uppercase;
+}
+
+.title__text {
+    flex-shrink: 0;
+    padding: 0 10px 0 13px;
+}
+
+.title__bold,
+.title__bold_blue {
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+@media screen and (min-width: 1024px) {
+    .title__bold,
+    .title__bold_blue,
+    .title_sub {
+        font-size: 26px;
+    }
+}
+
+.title__bold_blue {
+    color: #3d6cb0;
+}
+
+.title__new-line {
+    display: block;
+}
+
+.title__do-not-transform {
+    display: block;
+    text-transform: none;
+}
+
+@media screen and (min-width: 1024px) {
+    .title__do-not-transform {
+        display: inline;
+    }
+}
+
+.main__left-block > *,
+.main__right-block > * {
+    padding: 25px 0;
+}
+
+.main__left-block,
+.main__right-block {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+@media screen and (min-width: 768px) {
+    .main__left-block {
+        width: calc(412 / 1122 * 100%);
+    }
+
+    .main__right-block {
+        width: calc(640 / 1122 * 100%);
+    }
+}
+
+.personal-deatails {
+    text-align: center;
+}
+
+.personal-deatails__photo {
+    background-color: currentColor;
+    border-radius: 50%;
+    border: 1px solid currentColor;
+    box-shadow: inset 0 0 0 15px #fff;
+    color: #3d6cb0;
+    display: block;
+    height: 233px;
+    margin: auto;
+    overflow: hidden;
+    padding: 15px;
+    position: relative;
+    width: 233px;
+}
+
+.personal-deatails__image {
+    height: auto;
+    border-radius: 50%;
+    left: 50%;
+    max-height: 100%;
+    padding: 15px;
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.personal-deatails__title {
+    font-size: 30px;
+    margin: 35px 0 0;
+    text-transform: uppercase;
+}
+
+@media screen and (min-width: 1024px) {
+    .personal-deatails__title {
+        font-size: 62px;
+    }
+}
+
+.personal-deatails__name,
+.personal-deatails__position {
+  display: block;
+}
+
+.personal-deatails__name {
+    font-size: 30px;
+    font-weight: 300;
+}
+
+@media screen and (min-width: 1024px) {
+    .personal-deatails__name {
+        font-size: 52px;
+    }
+}
+
+.personal-deatails__position {
+    font-size: 16px;
+}
+
+@media screen and (min-width: 1024px) {
+    .personal-deatails__position {
+        font-size: 25px;
+    }
+}
+h2 {
+    color: #3d6cb0;
+    font-size: 41px;
+    font-weight: bold;
+    padding: 4px;
+    text-align: left;
+    text-transform: uppercase
+}
+
+a {
+    color: inherit;
+}
+
+address {
+    font-style:normal;
+   }
+
+.contact__details {
+    overflow: auto;
+}
+
+.contact__list {
+    font-style: normal;
+    font-size: 21px;
+}
+
+.contact__label {
+    color: #3d6cb0;
+    font-weight: 700;
+    padding-right: 40px;
+    text-transform: uppercase;
+}
+
+.contact__label,
+.contact__value {
+    padding-top: 40px;
+}
+
+.contact__link {
+    color: currentColor;
+    text-decoration: none;
+}
+.skills__item_active {
+    color: #3d6cb0;
+    font-size: 36px;
+}
+
+.skills__item {
+    color: #e6e6e6;
+    font-size: 36px;
+}
+
+.skills__title {
+    font-size: 26px;
+    font-weight: normal;
+    text-transform: uppercase;
+}
+
+.skills__block {
+    text-align: center;
+    margin-top: -25px;
+
+}
+
+.experience__post,
+.education__post {
+    margin-left: 12px;
+    margin-top: 20px;
+    padding-left: 40px;
+    position: relative;
+}
+
+.experience__post:before,
+.education__post:before {
+    background-color: #000000;
+    border-radius: 50%;
+    content: '';
+    display: block;
+    height: 20px;
+    left: 0;
+    position: absolute;
+    top: 5px;
+    width: 20px;
+}
+
+.software__list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.software__block {
+    margin-top: 30px;
+    width: calc(50% - 15px);
+}
+
+@media screen and (min-width: 1024px) {
+    .software__block {
+        width: calc(50% - 35px);
+    }
+}
+
+.software__progress {
+    -webkit-appearance: none;
+    appearance: none;
+    height: 23px;
+    width: 100%;
+}
+
+.software__progress[value]::-webkit-progress-bar {
+    background: #e6e6e6;
+}
+
+.software__progress[value]::-webkit-progress-value {
+    background: #3d6cb0;
+}
